@@ -43,7 +43,7 @@ public class PerfectoFastWebTemplate {
         // For Perfecto Turbo Web solution follow the instructions at http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation
         // You may want to enable the following lines of code to enable Turbo Web:
         // url = new URL(url, "/fast");
-        // capabilities.setCapability("offlineToken", Utils.Capabilities.getToken());
+        // capabilities.setCapability("securityToken", Utils.Capabilities.getToken());
 
         driver = new RemoteWebDriver(url, capabilities);
         reportiumClient = initReportiumClient();
@@ -99,6 +99,7 @@ public class PerfectoFastWebTemplate {
 
         try {
             driver.close();
+            driver.quit();
 
             // Retrieve the URL to the DigitalZoom Report
             String reportUrl = reportiumClient.getReportUrl();
