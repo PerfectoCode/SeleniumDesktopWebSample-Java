@@ -19,6 +19,29 @@ private static final String host = "MyHost.perfectomobile.com";
 - Run the project with the gradle command: `./gradlew WebSample` Where the WebSample argument denote the task responsible to run the test.
 Otherwise, use the testng.xml via your IDE to execute the tests without using the command line. 
 
+### Web Capabilities: 
+
+- To insure your tests run on Perfecto Web machines on the cloud use the capabilities as demonstrated in the code sample: <br/>
+```Java
+@BeforeMethod
+void beforeMethod() throws MalformedURLException {
+
+    // For more capabilities and supported platforms, see http://developers.perfectomobile.com/display/PD/Supported+Platforms
+    DesiredCapabilities capabilities = new DesiredCapabilities();
+    capabilities.setCapability("platformName", "Windows");
+    capabilities.setCapability("platformVersion", "10");
+    capabilities.setCapability("browserName", "Chrome");
+    capabilities.setCapability("browserVersion", "58");
+    capabilities.setCapability("resolution", "1280x1024");
+    capabilities.setCapability("user", Utils.Capabilities.getUser());
+    capabilities.setCapability("password", Utils.Capabilities.getPassword());
+    
+    // ... Rest of the code in beforeMethod()
+}
+```
+
+- More capabilities are available, read more [here](http://developers.perfectomobile.com/display/PD/Supported+Platforms).
+
 ### Perfecto Turbo Web Automation:
 
 Perfecto's Desktop Web environment introduces an accelerated interface to Web Browser automation with its new Turbo web interface. Using this new environment will allow you to connect quicker to the browser "device" you select for automating and testing your web application.
