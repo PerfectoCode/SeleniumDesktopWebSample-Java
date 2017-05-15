@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.perfecto.reporting-sdk:reportium-java:1.1.15">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.perfecto.reporting-sdk/reportium-java/1.1.15/5217fc7cbc808f675e5b7d98762af79639a984a6/reportium-java-1.1.15.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.perfecto.reporting-sdk/reportium-java/1.1.15/f14599f40bbe1b250d2daaa5d4b45f28a1ed1cf5/reportium-java-1.1.15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
