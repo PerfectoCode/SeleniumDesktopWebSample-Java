@@ -14,7 +14,7 @@ private static final String password = "Password";
 private static final String host = "MyHost.perfectomobile.com";
 ... 
 ```
-- Note :exclamation: the project include 4 templates: 
+- Note:exclamation: the project include 4 templates: 
     - PerfectoFastWebTemplate: template for Perfecto Turbo Web.
     - PerfectoFastWebTemplateReporting: template for Perfecto Turbo Web + DigitalZoom Reporting.
     - PerfectoWebTemplate: basic web automation template.
