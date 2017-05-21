@@ -8,8 +8,8 @@ public class Utils {
     static class Capabilities {
 
         private static final String token = "MyAuthToken";
-        private static final String user = "MyUser@MyCompany.com";
-        private static final String password = "Password";
+        private static final String user = "MyUser";
+        private static final String password = "MyPass";
         private static final String host = "MyHost.perfectomobile.com";
 
         public static String getToken() {

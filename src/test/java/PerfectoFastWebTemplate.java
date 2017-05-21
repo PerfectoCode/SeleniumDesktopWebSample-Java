@@ -76,12 +76,10 @@ public class PerfectoFastWebTemplate {
         driver.findElement(By.xpath("//*[contains(text(), 'Turbo Web Automation')]")).click();
         reportiumClient.stepEnd();
 
-        reportiumClient.stepStart("Step 3: validate 4 steps appear in the page");
-        String toFind = "//*[contains(text(), 'Step %s:')]";
-        for (int i = 1; i < 5; i++) {
-            boolean isPresented = driver.findElements(By.xpath(String.format(toFind, i))).size() > 0;
-            reportiumClient.reportiumAssert(String.format("Element with text \"Step %s\"", i), isPresented);
-        }
+        reportiumClient.stepStart("Step 3: validate text is presented in page");
+        String toFind = "//*[contains(text(), 'Platforms Supported by Turbo Web')]";
+        boolean isPresented = driver.findElements(By.xpath(toFind)).size() > 0;
+        reportiumClient.reportiumAssert(String.format("text:'%s' is presented?", "Platforms Supported by Turbo Web"), isPresented);
         reportiumClient.stepEnd();
 
     }
