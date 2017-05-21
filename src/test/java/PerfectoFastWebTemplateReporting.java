@@ -56,9 +56,10 @@ public class PerfectoFastWebTemplateReporting {
         // Complete your test here instead of the sample scenario
         reportiumClient.testStart("Turbo Web Template", new TestContext("Perfecto Turbo Web", "Tag 1", "Tag 2"));
 
-        reportiumClient.stepStart("Step 1: Navigate to developers.perfectomobile.com");
+        // DigitalZoom reporting stepStart/ stepEnd soon to be implemented in Turbo Web
+        // reportiumClient.stepStart("Step 1: Navigate to google");
         driver.get("http://google.com.com/");
-        reportiumClient.stepEnd();
+        // reportiumClient.stepEnd();
 
 
     }

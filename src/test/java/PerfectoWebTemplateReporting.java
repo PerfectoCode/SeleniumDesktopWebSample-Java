@@ -53,7 +53,7 @@ public class PerfectoWebTemplateReporting {
 
         reportiumClient.testStart("Web Template", new TestContext("Perfecto Turbo Web", "Tag 1", "Tag 2"));
 
-        reportiumClient.stepStart("Step 1: Navigate to developers.perfectomobile.com");
+        reportiumClient.stepStart("Step 1: Navigate to google");
         driver.get("http://google.com.com/");
         reportiumClient.stepEnd();
 
