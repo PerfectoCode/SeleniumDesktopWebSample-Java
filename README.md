@@ -3,7 +3,7 @@
 This code sample demonstrates how to use Perfecto Web Machines & Selenium + TestNG in order to execute tests 
 for your web applications on the cloud. 
 
-### Getting Stated: 
+### Quick Start: 
 - Clone or download the sample:<br/> `git clone https://github.com/PerfectoCode/WebAutomationSampleJava.git`
 - Add your Perfecto Lab credentials within the [Utils.java](src/test/java/Utils.java) class:
 ```Java
@@ -12,15 +12,32 @@ private static final String token = "MyAuthToken";
 private static final String user = "MyUser@MyCompany.com";
 private static final String password = "Password";
 private static final String host = "MyHost.perfectomobile.com";
-
 ... 
-
 ```
+- Note :exclamation: the project include 4 templates: 
+    - PerfectoFastWebTemplate: template for Perfecto Turbo Web.
+    - PerfectoFastWebTemplateReporting: template for Perfecto Turbo Web + DigitalZoom Reporting.
+    - PerfectoWebTemplate: basic web automation template.
+    - PerfectoWebTemplateReporting: same as the basic template + DigitalZoom Reporting.
+
+- Choose one (or more) of the templates, add it's class name in the [testng.xml](testng.xml) file for example:
+```xml
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" verbose="1" >
+    <test name="Fast Web" >
+        <classes>
+            <class name="PerfectoFastWebTemplate" />
+        </classes>
+    </test>
+
+</suite>
+```
+In the example above we use the PerfectoFastWebTemplate.
+
 - Run the project with the gradle command: `./gradlew WebSample` Where the WebSample argument denote the task responsible to run the test.
 Otherwise, use the testng.xml via your IDE to execute the tests without using the command line. 
 
 ### Web Capabilities: 
-
 - To insure your tests run on Perfecto Web machines on the cloud use the capabilities as demonstrated in the code sample: <br/>
 ```Java
 @BeforeMethod
@@ -31,7 +48,7 @@ void beforeMethod() throws MalformedURLException {
     capabilities.setCapability("platformName", "Windows");
     capabilities.setCapability("platformVersion", "10");
     capabilities.setCapability("browserName", "Chrome");
-    capabilities.setCapability("browserVersion", "58");
+    capabilities.setCapability("browserVersion", "latest");
     capabilities.setCapability("resolution", "1280x1024");
     capabilities.setCapability("user", Utils.Capabilities.getUser());
     capabilities.setCapability("password", Utils.Capabilities.getPassword());
@@ -54,14 +71,6 @@ Place the authentication token within the [Utils.java](src/test/java/Utils.java)
 ... 
 private static final String token = "MyAuthToken";
 ...
-```
-- Enable the lines commented in the test class [PerfectoFastWebTemplate.java](src/test/java/PerfectoFastWebTemplate.java):
-
-```Java
-// For Perfecto Turbo Web solution follow the instructions at http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation
-// You may want to enable the following lines of code to enable Turbo Web:
-url = new URL(url, "/fast");
-capabilities.setCapability("securityToken", Utils.Capabilities.getToken());
 ```
 
 ### Perfecto DigitalZoom reporting:

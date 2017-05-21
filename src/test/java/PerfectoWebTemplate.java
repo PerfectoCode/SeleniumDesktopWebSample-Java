@@ -10,9 +10,9 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Perfecto Web Automation Template For Fast Web
+ * Perfecto Web Automation Code Sample
  */
-public class PerfectoFastWebTemplate {
+public class PerfectoWebTemplate {
 
     private RemoteWebDriver driver;
 
@@ -26,15 +26,15 @@ public class PerfectoFastWebTemplate {
         capabilities.setCapability("browserName", "Chrome");
         capabilities.setCapability("browserVersion", "latest");
         capabilities.setCapability("resolution", "1280x1024");
+        capabilities.setCapability("user", Utils.Capabilities.getUser());
+        capabilities.setCapability("password", Utils.Capabilities.getPassword());
 
-        // For Perfecto Turbo Web solution follow the instructions at http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation
-        URL url = new URL("https://" + Utils.Capabilities.getHost() + "/nexperience/perfectomobile/wd/hub/fast");
-        capabilities.setCapability("securityToken", Utils.Capabilities.getToken());
+        URL url = new URL("https://" + Utils.Capabilities.getHost() + "/nexperience/perfectomobile/wd/hub");
 
         driver = new RemoteWebDriver(url, capabilities);
+
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-
     }
 
     @Test
@@ -48,9 +48,9 @@ public class PerfectoFastWebTemplate {
 
     @AfterMethod
     void afterMethod(ITestResult result) {
+
         driver.close();
         driver.quit();
     }
-
 
 }
