@@ -9,11 +9,13 @@ for your web applications on the cloud.
 ```Java
 ...
 private static final String token = "MyAuthToken";
-private static final String user = "MyUser@MyCompany.com";
-private static final String password = "Password";
-private static final String host = "MyHost.perfectomobile.com";
+private static final String user = System.getenv("user");
+private static final String password = System.getenv("password");
+private static final String host = System.getenv("host");
 ... 
 ```
+Note! you may want to use env variable for your credentials as demonstrated
+
 - Note:exclamation: the project include 4 templates: 
     - PerfectoFastWebTemplate: template for Perfecto Turbo Web.
     - PerfectoFastWebTemplateReporting: template for Perfecto Turbo Web + DigitalZoom Reporting.
