@@ -19,7 +19,12 @@ import java.util.concurrent.TimeUnit;
 
 
 /**
- * Perfecto Fast Web Automation Code Sample + DigitalZoom Reporting
+ * Perfecto Desktop Web Using Selenium WebDriver:
+ * This project demonstrate simply how to open a Desktop Web
+ * machine within your Perfecto Lab in the cloud and running your tests
+ *
+ * The project uses Perfecto Turbo Web, for more information follow the instructions at:
+ * http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation
  */
 public class PerfectoFastWebTemplateReporting {
     private RemoteWebDriver driver;

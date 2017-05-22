@@ -10,7 +10,9 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Perfecto Web Automation Code Sample
+ * Perfecto Desktop Web Using Selenium WebDriver:
+ * This project demonstrate simply how to open a Desktop Web
+ * machine within your Perfecto Lab in the cloud and running your tests
  */
 public class PerfectoWebTemplate {
 
