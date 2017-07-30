@@ -1,7 +1,5 @@
 # Java + TestNG Web Automation Code Sample
 
-[![CircleCI](https://circleci.com/gh/PerfectoCode/SeleniumDesktopWebSample-Java.svg?style=shield)](https://circleci.com/gh/PerfectoCode/SeleniumDesktopWebSample-Java)
-
 This code sample demonstrates how to use Perfecto Web Machines & Selenium + TestNG in order to execute tests 
 for your web applications on the cloud. 
 
