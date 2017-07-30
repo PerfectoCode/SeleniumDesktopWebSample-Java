@@ -28,8 +28,7 @@ public class PerfectoWebTemplate {
         capabilities.setCapability("browserName", "Chrome");
         capabilities.setCapability("browserVersion", "latest");
         capabilities.setCapability("resolution", "1280x1024");
-        capabilities.setCapability("user", Utils.Capabilities.getUser());
-        capabilities.setCapability("password", Utils.Capabilities.getPassword());
+        capabilities.setCapability("securityToken", Utils.Capabilities.getToken());
 
         URL url = new URL("https://" + Utils.Capabilities.getHost() + "/nexperience/perfectomobile/wd/hub");
 

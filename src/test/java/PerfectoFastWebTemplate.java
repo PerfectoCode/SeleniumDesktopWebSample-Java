@@ -31,10 +31,10 @@ public class PerfectoFastWebTemplate {
         capabilities.setCapability("browserName", "Chrome");
         capabilities.setCapability("browserVersion", "latest");
         capabilities.setCapability("resolution", "1280x1024");
+        capabilities.setCapability("securityToken", Utils.Capabilities.getToken());
 
         // For Perfecto Turbo Web solution follow the instructions at http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation
         URL url = new URL("https://" + Utils.Capabilities.getHost() + "/nexperience/perfectomobile/wd/hub/fast");
-        capabilities.setCapability("securityToken", Utils.Capabilities.getToken());
 
         driver = new RemoteWebDriver(url, capabilities);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

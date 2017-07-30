@@ -40,12 +40,10 @@ public class PerfectoFastWebTemplateReporting {
         capabilities.setCapability("browserName", "Chrome");
         capabilities.setCapability("browserVersion", "latest");
         capabilities.setCapability("resolution", "1280x1024");
-        capabilities.setCapability("user", Utils.Capabilities.getUser());
-        capabilities.setCapability("password", Utils.Capabilities.getPassword());
+        capabilities.setCapability("securityToken", Utils.Capabilities.getToken());
 
         // For Perfecto Turbo Web solution follow the instructions at http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation
         URL url = new URL("https://" + Utils.Capabilities.getHost() + "/nexperience/perfectomobile/wd/hub/fast");
-        capabilities.setCapability("securityToken", Utils.Capabilities.getToken());
 
         driver = new RemoteWebDriver(url, capabilities);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -61,10 +59,9 @@ public class PerfectoFastWebTemplateReporting {
         // Complete your test here instead of the sample scenario
         reportiumClient.testStart("Turbo Web Template", new TestContext("Perfecto Turbo Web", "Tag 1", "Tag 2"));
 
-        // DigitalZoom reporting stepStart/ stepEnd soon to be implemented in Turbo Web
-        // reportiumClient.stepStart("Step 1: Navigate to google");
+         reportiumClient.stepStart("Step 1: Navigate to google");
         driver.get("http://google.com.com/");
-        // reportiumClient.stepEnd();
+         reportiumClient.stepEnd();
 
 
     }
