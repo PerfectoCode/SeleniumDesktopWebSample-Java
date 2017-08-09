@@ -12,7 +12,7 @@ public class Utils {
 
     static class Capabilities {
 
-        private static final String token = "MyAuthToken";
+        private static final String token = System.getenv("token");
         private static final String user = System.getenv("user");
         private static final String password = System.getenv("password");
         private static final String host = System.getenv("host");
