@@ -13,20 +13,10 @@ public class Utils {
     static class Capabilities {
 
         private static final String token = System.getenv("token");
-        private static final String user = System.getenv("user");
-        private static final String password = System.getenv("password");
         private static final String host = System.getenv("host");
 
         public static String getToken() {
             return token;
-        }
-
-        public static String getUser() {
-            return user;
-        }
-
-        public static String getPassword() {
-            return password;
         }
 
         public static String getHost() {
@@ -54,5 +44,4 @@ public class Utils {
             return new ReportiumClientFactory().createPerfectoReportiumClient(perfectoExecutionContext);
         }
     }
-
 }
