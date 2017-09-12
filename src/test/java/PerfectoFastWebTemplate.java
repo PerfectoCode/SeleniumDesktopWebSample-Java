@@ -33,7 +33,9 @@ public class PerfectoFastWebTemplate {
         capabilities.setCapability("resolution", "1280x1024");
         capabilities.setCapability("securityToken", Utils.Capabilities.getToken());
 
-        // For Perfecto Turbo Web solution follow the instructions at http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation
+        /** For more information regarding Perfecto Turbo Web solution please visit http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation
+            For Regular web (physical devices) remove the /fast at the end of the Url */
+
         URL url = new URL("https://" + Utils.Capabilities.getHost() + "/nexperience/perfectomobile/wd/hub/fast");
 
         driver = new RemoteWebDriver(url, capabilities);
