@@ -8,20 +8,24 @@ for your web applications on the cloud.
 - Add your Perfecto Lab credentials within the [Utils.java](src/test/java/Utils.java) class:
 ```Java
 ...
-private static final String token = "MyAuthToken";
-private static final String user = System.getenv("user");
-private static final String password = System.getenv("password");
+private static final String token = System.getenv("token");
 private static final String host = System.getenv("host");
 ... 
 ```
-Note! you may want to use env variable for your credentials as demonstrated
+You may want to use env variable for your credentials as demonstrated.
 
-- Note:exclamation: the project include 4 templates: 
+Old school credentials may be used (for non turbo web only) by replacing the security token with username and password:
+```Java
+...
+private static final String user = System.getenv("user");
+private static final String password = System.getenv("password");
+...
+```
+:exclamation:Using old school credentials is not a best practice and is not recommended.
+
+- Note:exclamation: the project include 2 templates:
     - PerfectoFastWebTemplate: template for Perfecto Turbo Web.
     - PerfectoFastWebTemplateReporting: template for Perfecto Turbo Web + DigitalZoom Reporting.
-    - PerfectoWebTemplate: basic web automation template.
-    - PerfectoWebTemplateReporting: same as the basic template + DigitalZoom Reporting.
-
 - Choose one (or more) of the templates, add it's class name in the [testng.xml](testng.xml) file for example:
 ```xml
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
@@ -31,7 +35,6 @@ Note! you may want to use env variable for your credentials as demonstrated
             <class name="PerfectoFastWebTemplate" />
         </classes>
     </test>
-
 </suite>
 ```
 In the example above we use the PerfectoFastWebTemplate.
@@ -70,9 +73,7 @@ Perfecto's Desktop Web environment introduces an accelerated interface to Web Br
 - To enable Turbo Web Automation in this code sample follow the instructions in the link above in order to generate authentication token.
 Place the authentication token within the [Utils.java](src/test/java/Utils.java) class:
 ```Java
-... 
-private static final String token = "MyAuthToken";
-...
+private static final String token = System.getenv("token");
 ```
 
 ### Perfecto DigitalZoom reporting:

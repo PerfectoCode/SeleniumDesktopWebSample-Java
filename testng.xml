@@ -1,9 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Suite1" verbose="1" >
     <test name="Fast Web" >
+    <classes>
+        <class name="PerfectoFastWebTemplate" />
+    </classes>
+    </test>
+    <test name="Fast Web Reporting" >
         <classes>
-            <class name="PerfectoFastWebTemplate" />
+            <class name="PerfectoFastWebTemplateReporting" />
         </classes>
     </test>
-
 </suite>
