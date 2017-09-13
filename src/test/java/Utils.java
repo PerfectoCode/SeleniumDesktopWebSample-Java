@@ -22,7 +22,6 @@ public class Utils {
         public static String getHost() {
             return host;
         }
-
     }
 
     static class DigitalZoom {
@@ -33,6 +32,7 @@ public class Utils {
          *
          * @return ReportiumClient
          */
+
         public static ReportiumClient initReportiumClient(RemoteWebDriver driver) {
             PerfectoExecutionContext perfectoExecutionContext = new PerfectoExecutionContext.PerfectoExecutionContextBuilder()
                     .withProject(new Project("Turbo Web", "1"))

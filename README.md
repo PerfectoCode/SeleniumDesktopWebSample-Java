@@ -48,7 +48,6 @@ Otherwise, use the testng.xml via your IDE to execute the tests without using th
 @BeforeMethod
 void beforeMethod() throws MalformedURLException {
 
-    // For more capabilities and supported platforms, see http://developers.perfectomobile.com/display/PD/Supported+Platforms
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("platformName", "Windows");
     capabilities.setCapability("platformVersion", "10");
@@ -71,7 +70,7 @@ void beforeMethod() throws MalformedURLException {
 
 Perfecto's Desktop Web environment introduces an accelerated interface to Web Browser automation with its new Turbo web interface. Using this new environment will allow you to connect quicker to the browser "device" you select for automating and testing your web application.
 
-*Click [here](http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation) to read more about Turbo Web Automation.*
+*Click [here](http://developers.perfectomobile.com/display/PD/Automating+Web-apps+with+Perfecto) to read more about Turbo Web Automation.*
 
 - To enable Turbo Web Automation in this code sample follow the instructions in the link above in order to generate authentication token.
 Place the authentication token within the [Utils.java](src/test/java/Utils.java) class:
